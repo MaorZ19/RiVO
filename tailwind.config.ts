@@ -19,15 +19,15 @@ export default {
     },
     extend: {
       colors: {
-        primary: "#243949",
-        secondary: "#517fa4",
-        accent: "#0EA5E9",
-        background: "#F8FAFC",
+        primary: "#D946EF",
+        secondary: "#FFDEE2",
+        accent: "#E879F9",
+        background: "#FFF5F7",
         surface: "#FFFFFF",
-        muted: "#E2E8F0",
-        "muted-foreground": "#64748B",
-        border: "#E2E8F0",
-        input: "#F1F5F9",
+        muted: "#FCE7F3",
+        "muted-foreground": "#BE185D",
+        border: "#FBCFE8",
+        input: "#FDF2F8",
         foreground: "hsl(var(--foreground))",
       },
       textColor: {
