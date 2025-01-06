@@ -50,7 +50,28 @@ export default {
       backdropBlur: {
         xs: "2px",
       },
+      rotate: {
+        'y-12': '12deg',
+      },
+      perspective: {
+        '1000': '1000px',
+      },
+      transformStyle: {
+        '3d': 'preserve-3d',
+      },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [
+    require("tailwindcss-animate"),
+    function({ addUtilities }) {
+      addUtilities({
+        '.perspective-1000': {
+          perspective: '1000px',
+        },
+        '.rotate-y-12': {
+          transform: 'rotateY(12deg)',
+        },
+      });
+    },
+  ],
 } satisfies Config;
