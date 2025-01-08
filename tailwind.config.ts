@@ -19,15 +19,15 @@ export default {
     },
     extend: {
       colors: {
-        primary: "#2E7D32",
-        secondary: "#4CAF50",
-        accent: "#81C784",
-        background: "#F1F8E9",
+        primary: "#243949",
+        secondary: "#517fa4",
+        accent: "#0EA5E9",
+        background: "#F8FAFC",
         surface: "#FFFFFF",
-        muted: "#C8E6C9",
-        "muted-foreground": "#558B2F",
-        border: "#A5D6A7",
-        input: "#E8F5E9",
+        muted: "#E2E8F0",
+        "muted-foreground": "#64748B",
+        border: "#E2E8F0",
+        input: "#F1F5F9",
         foreground: "hsl(var(--foreground))",
       },
       textColor: {
@@ -50,28 +50,7 @@ export default {
       backdropBlur: {
         xs: "2px",
       },
-      rotate: {
-        'y-12': '12deg',
-      },
-      perspective: {
-        '1000': '1000px',
-      },
-      transformStyle: {
-        '3d': 'preserve-3d',
-      },
     },
   },
-  plugins: [
-    require("tailwindcss-animate"),
-    function({ addUtilities }) {
-      addUtilities({
-        '.perspective-1000': {
-          perspective: '1000px',
-        },
-        '.rotate-y-12': {
-          transform: 'rotateY(12deg)',
-        },
-      });
-    },
-  ],
+  plugins: [require("tailwindcss-animate")],
 } satisfies Config;
