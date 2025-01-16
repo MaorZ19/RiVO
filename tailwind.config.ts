@@ -19,15 +19,15 @@ export default {
     },
     extend: {
       colors: {
-        primary: "#2D5A27",      // כהה יותר ירוק
-        secondary: "#4A9F46",    // ירוק בינוני
-        accent: "#65B741",       // ירוק בהיר
-        background: "#F5FFF3",   // ירוק בהיר מאוד לרקע
+        primary: "#243949",
+        secondary: "#517fa4",
+        accent: "#0EA5E9",
+        background: "#F8FAFC",
         surface: "#FFFFFF",
-        muted: "#E8F5E9",
-        "muted-foreground": "#558B2F",
-        border: "#C8E6C9",
-        input: "#F1F8E9",
+        muted: "#E2E8F0",
+        "muted-foreground": "#64748B",
+        border: "#E2E8F0",
+        input: "#F1F5F9",
         foreground: "hsl(var(--foreground))",
       },
       textColor: {
@@ -50,7 +50,28 @@ export default {
       backdropBlur: {
         xs: "2px",
       },
+      rotate: {
+        'y-12': '12deg',
+      },
+      perspective: {
+        '1000': '1000px',
+      },
+      transformStyle: {
+        '3d': 'preserve-3d',
+      },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [
+    require("tailwindcss-animate"),
+    function({ addUtilities }) {
+      addUtilities({
+        '.perspective-1000': {
+          perspective: '1000px',
+        },
+        '.rotate-y-12': {
+          transform: 'rotateY(12deg)',
+        },
+      });
+    },
+  ],
 } satisfies Config;

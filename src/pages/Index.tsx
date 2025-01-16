@@ -2,6 +2,7 @@ import { ArrowRight, ChevronDown } from "lucide-react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import Navigation from "@/components/Navigation";
+import Gallery3D from "@/components/Gallery3D";
 
 const Index = () => {
   const [activeAccordion, setActiveAccordion] = useState<number | null>(null);
@@ -11,7 +12,7 @@ const Index = () => {
       <Navigation />
       
       {/* Hero Section */}
-        <section className="relative overflow-hidden px-6 lg:px-8 py-24 sm:py-32">
+      <section className="relative overflow-hidden px-6 lg:px-8 py-24 sm:py-32">
           <div className="mx-auto max-w-7xl text-center">
             <h1 className="text-4xl sm:text-6xl font-bold tracking-tight text-primary mb-6">
               Lead to your
@@ -52,8 +53,10 @@ const Index = () => {
               />
             </div>
           </div>
+      </section>
 
-        </section>
+      {/* Gallery Section */}
+      <Gallery3D />
 
       {/* Features Section */}
       <section className="py-24 bg-surface px-6 lg:px-8">
@@ -101,7 +104,7 @@ const Index = () => {
       </section>
 
       {/* FAQ Section */}
-        <section className="py-24 px-6 lg:px-8">
+      <section className="py-24 px-6 lg:px-8">
           <div className="mx-auto max-w-3xl">
             <h2 className="text-3xl font-bold text-center mb-16">Frequently Asked Questions</h2>
             <div className="space-y-4">
@@ -151,10 +154,10 @@ const Index = () => {
               ))}
             </div>
           </div>
-        </section>
+      </section>
 
       {/* CTA Section */}
-        <section className="py-24 bg-primary text-white px-6 lg:px-8">
+      <section className="py-24 bg-primary text-white px-6 lg:px-8">
           <div className="mx-auto max-w-7xl text-center">
             <h2 className="text-3xl sm:text-5xl font-bold mb-8">Ready to Get Started with Rivo?</h2>
             <p className="text-white/80 mb-8 max-w-2xl mx-auto">
@@ -167,7 +170,7 @@ const Index = () => {
               Join Us
             </a>
           </div>
-        </section>
+      </section>
     </div>
   );
 };
